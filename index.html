@@ -237,6 +237,39 @@
             font-size: 1.1rem;
         }
 
+        /* Desktop Section */
+        .desktop-grid {
+            display: grid;
+            grid-template-columns: minmax(280px, 420px) 1fr;
+            gap: 3rem;
+            align-items: start;
+            margin-top: 2rem;
+        }
+
+        .desktop-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+
+        .code-block {
+            background-color: var(--bg-darker);
+            color: var(--accent-green);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+            font-size: 1rem;
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .desktop-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* Highlight Box */
         .highlight-box {
             background-color: var(--bg-light);
@@ -303,7 +336,7 @@
             <div class="container">
                 <img src="images/PlanovaIcon.svg" alt="Planova Icon" class="hero-icon">
                 <h2>A Future-Proof Way to Manage Your Life in Plaintext</h2>
-                <p class="subtitle">Planova is an opinionated, lightweight Android application designed for people who want full control over their data.</p>
+                <p class="subtitle">Planova is an opinionated, lightweight Android application designed for people who want full control over their data. Now with a companion panel for your Linux desktop.</p>
                 <p class="tagline">Modern life-management, without the lock-in.</p>
                 <img src="images/wide.png" alt="Planova Main Interface" class="hero-image">
                 <a href="https://play.google.com/store/apps/details?id=fr.rvier.planova" class="cta-button">Get Started</a>
@@ -376,6 +409,21 @@
                     </div>
                     <div class="screenshot-item">
                         <img src="images/Screenshots/settintgs_screenshot.png" alt="Planova Settings">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2>Planova on Your Linux Desktop</h2>
+                <div class="desktop-grid">
+                    <img src="images/Screenshots/quickshell_panel.png" alt="Planova QuickShell panel on Omarchy">
+                    <div>
+                        <p>Running <a href="https://omarchy.org" style="color: var(--accent-blue);">Omarchy</a>? PlanovaQuickShell replaces the clock in your bar with a Planova-powered panel: a month calendar with per-day indicators, the selected day's events, tasks and notes, quick add, todo toggling, refill, and a notes browser. Fully keyboard-driven.</p>
+                        <p>It reads and writes the exact same plaintext files as the mobile app. Sync your Org folder with Syncthing or any tool you like, and a todo checked on your phone shows up on your desktop within seconds : and vice versa.</p>
+                        <div class="code-block">omarchy plugin add https://github.com/brvier/PlanovaQuickShell.git</div>
+                        <a href="https://github.com/brvier/PlanovaQuickShell" class="cta-button">View on GitHub</a>
                     </div>
                 </div>
             </div>

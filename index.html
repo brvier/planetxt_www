@@ -136,6 +136,19 @@
             box-shadow: 0 8px 16px rgba(184, 187, 38, 0.3);
         }
 
+        .cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .cta-button.secondary {
+            background-color: transparent;
+            color: var(--accent-green);
+            border: 2px solid var(--accent-green);
+        }
+
         /* Main Content Sections */
         section {
             padding: 4rem 0;
@@ -338,8 +351,12 @@
                 <h2>A Future-Proof Way to Manage Your Life in Plaintext</h2>
                 <p class="subtitle">PlaneTxt is an opinionated, lightweight Android application designed for people who want full control over their data. Now with a companion panel for your Linux desktop.</p>
                 <p class="tagline">Modern life-management, without the lock-in.</p>
-                <img src="images/wide.png" alt="PlaneTxt Main Interface" class="hero-image">
-                <a href="https://play.google.com/store/apps/details?id=fr.rvier.planetxt" class="cta-button">Get Started</a>
+                <img src="images/feature.png" alt="PlaneTxt calendar, day view and Markdown editor" class="hero-image">
+                <div class="cta-row">
+                    <a href="https://play.google.com/store/apps/details?id=fr.rvier.planetxt" class="cta-button">Get it on Google Play</a>
+                    <a href="https://f-droid.org/packages/fr.rvier.planetxt/" class="cta-button secondary">F-Droid</a>
+                    <a href="https://github.com/brvier/PlaneTxt/releases/latest" class="cta-button secondary">APK on GitHub</a>
+                </div>
             </div>
         </section>
 
@@ -362,12 +379,12 @@
                     <div class="feature-card">
                         <div class="feature-icon">🔔</div>
                         <h3>Notifications</h3>
-                        <p>Get notified about upcoming events and never miss an important appointment. Notifications are generated directly from your plaintext event files.</p>
+                        <p>Get notified about upcoming events and never miss an important appointment. Reminders are generated directly from your plaintext event files, with the delay you choose.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">✔️</div>
                         <h3>Todo</h3>
-                        <p>A flexible task manager rooted in plaintext.</p>
+                        <p>A flexible task manager rooted in plaintext. Check a todo with one tap, and each morning carry over the ones left open on previous days.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">📔</div>
@@ -377,12 +394,27 @@
                     <div class="feature-card">
                         <div class="feature-icon">📝</div>
                         <h3>Notes</h3>
-                        <p>Quick capture or long-form writing, organized your way. Plaintext and Markdown means powerful interoperability: edit with any editor, process with scripts, or keep long-term archives.</p>
+                        <p>Quick capture or long-form writing, organized in folders. Share a note, archive it, or save text shared from another app as a new note. Plaintext and Markdown means powerful interoperability: edit with any editor, process with scripts, or keep long-term archives.</p>
                     </div>
                     <div class="feature-card">
                         <div class="feature-icon">📱</div>
                         <h3>Widget</h3>
                         <p>Keep a view on your upcoming events and todos directly on your home screen. Stay organized at a glance without opening the app.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Search</h3>
+                        <p>Find anything across all your days and notes at once. Accents are ignored, so "cafe" finds "café".</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🗓️</div>
+                        <h3>Week Review</h3>
+                        <p>Look back on your week: the todos you finished, the ones still open or carried over, and the events you had.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔄</div>
+                        <h3>Sync Friendly</h3>
+                        <p>Changes made on another device are detected before PlaneTxt saves, so nothing gets silently overwritten. Conflict copies left by your sync tool are flagged.</p>
                     </div>
                 </div>
             </div>
@@ -393,22 +425,22 @@
                 <h2>See PlaneTxt in Action</h2>
                 <div class="screenshots">
                     <div class="screenshot-item">
-                        <img src="images/Screenshots/main_screenshot.png" alt="PlaneTxt Main Screen">
+                        <img src="images/Screenshots/calendar_light.png" alt="PlaneTxt calendar with the day's events and tasks" loading="lazy">
                     </div>
                     <div class="screenshot-item">
-                        <img src="images/Screenshots/editor_screenshot.png" alt="PlaneTxt Editor">
+                        <img src="images/Screenshots/editor.png" alt="PlaneTxt Markdown editor for a daily file" loading="lazy">
                     </div>
                     <div class="screenshot-item">
-                        <img src="images/Screenshots/notes_list_screenshot.png" alt="PlaneTxt Notes List">
+                        <img src="images/Screenshots/notes_light.png" alt="PlaneTxt notes list" loading="lazy">
                     </div>
                     <div class="screenshot-item">
-                        <img src="images/Screenshots/widget_screenshot.png" alt="PlaneTxt Widget">
+                        <img src="images/Screenshots/calendar_dark.png" alt="PlaneTxt calendar in the dark theme" loading="lazy">
                     </div>
                     <div class="screenshot-item">
-                        <img src="images/Screenshots/refill_screenshot.png" alt="PlaneTxt Refill">
+                        <img src="images/Screenshots/notes_dark.png" alt="PlaneTxt notes list in the dark theme" loading="lazy">
                     </div>
                     <div class="screenshot-item">
-                        <img src="images/Screenshots/settintgs_screenshot.png" alt="PlaneTxt Settings">
+                        <img src="images/Screenshots/settings.png" alt="PlaneTxt settings" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -423,6 +455,7 @@
                         <p>Running <a href="https://omarchy.org" style="color: var(--accent-blue);">Omarchy</a>? PlaneTxtQuickShell replaces the clock in your bar with a PlaneTxt-powered panel: a month calendar with per-day indicators, the selected day's events, tasks and notes, quick add, todo toggling, refill, and a notes browser. Fully keyboard-driven.</p>
                         <p>It reads and writes the exact same plaintext files as the mobile app. Sync your Org folder with Syncthing or any tool you like, and a todo checked on your phone shows up on your desktop within seconds : and vice versa.</p>
                         <div class="code-block">omarchy plugin add https://github.com/brvier/PlaneTxtQuickShell.git</div>
+                        <p>Prefer a full window? The PlaneTxt app also runs on the Linux desktop: build it from source, as described in the README.</p>
                         <a href="https://github.com/brvier/PlaneTxtQuickShell" class="cta-button">View on GitHub</a>
                     </div>
                 </div>
@@ -436,6 +469,7 @@
                     <h3>No online account. No servers. No hidden services.</h3>
                     <p>PlaneTxt deliberately avoids built-in sync. Why? Because you should choose how and where your data moves.</p>
                     <p>Use Nextcloud, Dropbox, Syncthing, Git, local backups, or any method you trust. PlaneTxt works harmoniously with your existing syncing tools : without interfering or imposing.</p>
+                    <p>When a file changed elsewhere since PlaneTxt read it, you choose which version to keep, or keep both. Conflict copies left by Syncthing, Nextcloud or Dropbox are flagged so you can merge them.</p>
                 </div>
             </div>
         </section>
